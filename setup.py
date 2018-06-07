@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 requirements = []
 with open('requirements.txt') as f:
