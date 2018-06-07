@@ -12,6 +12,7 @@ This tutorial assumes you use Python 3.5. Replace `python3.5` with your version 
 ```python3.5 -m pip install discord-openbot```
 ##### Manually
 ```git clone https://github.com/jcb1317/OpenBot.git```
+
 ```python3.6 setup.py install```
 
 ## Introduction
