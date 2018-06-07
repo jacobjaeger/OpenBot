@@ -35,7 +35,7 @@ class Bot(discord.Client):
             return
         invoke = args[0][len(self.prefix):]
         if invoke in self._commands.keys():
-            await (self._commands[invoke])(self, message)
+            await (self._commands[invoke]["_coro"])(self, message)
 
     def command(self, name, **kwargs):
         """
@@ -63,7 +63,6 @@ class Bot(discord.Client):
         :param plugin: openbot.Plugin object
         :return:
         """
-
         for plugin in plugins:
             for command in plugin._commands.keys():
                 self._commands[command] = plugin._commands[command]
