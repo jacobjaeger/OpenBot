@@ -17,6 +17,7 @@ class Plugin(object):
         kwargs = {i: kwargs[i] for i in kwargs.keys() if i != "_coro"}
 
         def command_func(func):
+            self._commands[name] = {}
             self._commands[name]["_coro"] = func
             for i in kwargs.keys():
                 self._commands[name][i] = kwargs[i]
